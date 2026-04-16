@@ -4,10 +4,143 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
 ul {
     list-style-type: none;
 }
 
-.wrapper > * {
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 1fr 3fr 5fr;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.search-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.search-section > * {
+    display: grid;
+}
+
+.search-section .search {
+    grid-template-columns: 1fr 7fr;
+}
+
+.search-section .user {
+    grid-template-columns: 1fr 1fr 3fr;
+}
+
+.greetings-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.greetings-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.greetings-container .user-icon {
+    grid-row: 1 / -1;
+}
+
+.actions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main-content .container {
+    height: 200px;
+    width: 350px;
+}
+
+.your-projects {
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+}
+
+.your-projects .container {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.container .icons-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.your-projects .subtitle {
+    grid-column: 1 / -1;
+}
+
+.announcements,
+.trending {
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.announcements-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 90%;
+    width: 90%;
+}
+
+.trending-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.trending-subcontainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trending-subcontainer > *:first-child {
+    grid-row: 1 / -1;
+}
+
+.wrapper > *,
+.sidebar > *,
+.header > *,
+.search-section > *,
+.greetings-section > *,
+.greetings-container > *,
+.main-content > *,
+.your-projects > *,
+.announcements > *,
+.trending > *,
+.trending-subcontainer > * {
     border: 1px solid black;
 }
+
